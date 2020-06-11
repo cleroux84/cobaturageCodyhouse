@@ -9531,6 +9531,20 @@ Usage: codyhouse.co/license
   background-size: 100%;
 }
 
+#boat1 {
+  margin-left: 350px;
+  margin-top: 240px;
+}
+
+#boat2 {
+  margin-left: 640px;
+}
+
+#boat3 {
+  margin-left: 800px;
+  margin-top: 60px;
+}
+
 :root {
   --f-header2-height: 50px;
   --f-header2-logo-width: 104px;
@@ -9693,6 +9707,7 @@ Usage: codyhouse.co/license
 .f-header2__list {
     display: flex;
     align-items: center;
+    margin-right: 30px;
   }
 
   .f-header2__nav-grid {
@@ -9719,6 +9734,11 @@ Usage: codyhouse.co/license
 
   .f-header2__link {
     padding: var(--space-xxxs) var(--space-xxs);
+  }
+
+  .logged {
+    margin-right: 20px;
+    color: blue;
   }
 
   .f-header2__link--icon span {
@@ -9991,6 +10011,206 @@ Usage: codyhouse.co/license
 .search-input__btn:focus .icon,
 .search-input .form-control:focus + .search-input__btn .icon {
   color: var(--color-primary);
+}
+
+/* -------------------------------- 
+
+File#: _1_modal-window
+Title: Modal Window
+Descr: A modal dialog used to display critical information
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.modal {
+  position: fixed;
+  z-index: var(--zindex-overlay);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.modal:not(.modal--is-visible) {
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.modal--is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__content {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: 100%;
+}
+
+.modal__close-btn {
+  display: flex;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.modal__close-btn .icon {
+  display: block;
+  margin: auto;
+}
+
+.modal__close-btn--outer {
+  width: 3.2em;
+  height: 3.2em;
+  position: fixed;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  z-index: var(--zindex-fixed-element);
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.8);
+}
+.modal__close-btn--outer:hover {
+  background-color: var(--color-contrast-higher);
+}
+.modal__close-btn--outer .icon {
+  color: var(--color-bg);
+}
+
+.modal__close-btn--inner {
+  width: 2em;
+  height: 2em;
+  background-color: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+}
+.modal__close-btn--inner .icon {
+  color: inherit;
+}
+.modal__close-btn--inner:hover {
+  box-shadow: var(--shadow-md);
+}
+
+:root {
+  --modal-transition-duration: 0.2s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .modal--animate-fade {
+    --modal-transition-duration: 0.2s;
+    transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
+  }
+  .modal--animate-fade.modal--is-visible {
+    transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s;
+  }
+
+  .modal--animate-scale,
+.modal--animate-translate-up,
+.modal--animate-translate-down,
+.modal--animate-translate-right,
+.modal--animate-translate-left {
+    --modal-transition-duration: 0.2s;
+    transition: opacity var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
+  }
+  .modal--animate-scale .modal__content,
+.modal--animate-translate-up .modal__content,
+.modal--animate-translate-down .modal__content,
+.modal--animate-translate-right .modal__content,
+.modal--animate-translate-left .modal__content {
+    will-change: transform;
+    transition: transform var(--modal-transition-duration) var(--ease-out);
+  }
+  .modal--animate-scale.modal--is-visible,
+.modal--animate-translate-up.modal--is-visible,
+.modal--animate-translate-down.modal--is-visible,
+.modal--animate-translate-right.modal--is-visible,
+.modal--animate-translate-left.modal--is-visible {
+    transition: opacity var(--modal-transition-duration), visibility 0s;
+  }
+  .modal--animate-scale.modal--is-visible .modal__content,
+.modal--animate-translate-up.modal--is-visible .modal__content,
+.modal--animate-translate-down.modal--is-visible .modal__content,
+.modal--animate-translate-right.modal--is-visible .modal__content,
+.modal--animate-translate-left.modal--is-visible .modal__content {
+    transform: scale(1);
+  }
+
+  .modal--animate-slide-up,
+.modal--animate-slide-down,
+.modal--animate-slide-right,
+.modal--animate-slide-left {
+    --modal-transition-duration: 0.3s;
+    transition: opacity 0s var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
+  }
+  .modal--animate-slide-up .modal__content,
+.modal--animate-slide-down .modal__content,
+.modal--animate-slide-right .modal__content,
+.modal--animate-slide-left .modal__content {
+    will-change: transform;
+    transition: transform var(--modal-transition-duration) var(--ease-out);
+  }
+  .modal--animate-slide-up.modal--is-visible,
+.modal--animate-slide-down.modal--is-visible,
+.modal--animate-slide-right.modal--is-visible,
+.modal--animate-slide-left.modal--is-visible {
+    transition: background-color var(--modal-transition-duration), visibility 0s;
+  }
+  .modal--animate-slide-up.modal--is-visible .modal__content,
+.modal--animate-slide-down.modal--is-visible .modal__content,
+.modal--animate-slide-right.modal--is-visible .modal__content,
+.modal--animate-slide-left.modal--is-visible .modal__content {
+    transform: scale(1);
+  }
+
+  .modal--animate-scale .modal__content {
+    transform: scale(0.95);
+  }
+
+  .modal--animate-translate-up .modal__content {
+    transform: translateY(40px);
+  }
+
+  .modal--animate-translate-down .modal__content {
+    transform: translateY(-40px);
+  }
+
+  .modal--animate-translate-right .modal__content {
+    transform: translateX(-40px);
+  }
+
+  .modal--animate-translate-left .modal__content {
+    transform: translateX(40px);
+  }
+
+  .modal--animate-slide-up .modal__content {
+    transform: translateY(100%);
+  }
+
+  .modal--animate-slide-down .modal__content {
+    transform: translateY(-100%);
+  }
+
+  .modal--animate-slide-right .modal__content {
+    transform: translateX(-100%);
+  }
+
+  .modal--animate-slide-left .modal__content {
+    transform: translateX(100%);
+  }
+}
+.modal--is-loading .modal__content {
+  visibility: hidden;
+}
+.modal--is-loading .modal__loader {
+  display: flex;
+}
+
+.modal__loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=style.css.map */

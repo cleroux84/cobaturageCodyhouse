@@ -15,6 +15,8 @@
 <?php include "partials/navbar.php" ?>
 <?php include "partials/header.php" ?>
 <?php include "partials/footer.php" ?>
+<!-- <?php include "partials/modal.php" ?>  -->
+
 
   
 <script src="assets/js/scripts.js"></script>

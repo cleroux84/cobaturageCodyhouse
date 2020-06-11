@@ -7,11 +7,26 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 .body2{
-    background-image: url("../../images/map.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  
-  }
+      background-image: url("../../images/map.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    
+    } 
+
+
+#boat1{
+  margin-left: 350px;
+  margin-top: 240px;
+}
+
+#boat2{
+  margin-left: 640px;
+}
+
+#boat3{
+  margin-left: 800px;
+  margin-top: 60px;
+}
   
   :root {
       --f-header2-height: 50px;
@@ -184,6 +199,7 @@ Usage: codyhouse.co/license
       .f-header2__list {
         display: flex;
         align-items: center;
+        margin-right: 30px;
       }
     
       .f-header2__nav-grid {
@@ -212,6 +228,10 @@ Usage: codyhouse.co/license
       .f-header2__link {
         padding: var(--space-xxxs) var(--space-xxs);
       }
+      .logged{
+        margin-right: 20px;
+        color: blue;
+    }
     
       .f-header2__link--icon {
         span {

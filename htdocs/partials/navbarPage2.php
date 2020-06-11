@@ -46,7 +46,25 @@
       <ul class="f-header2__list flex-grow flex-basis-0 justify-end@md">
         <li class="f-header2__item"><a href="http://testch.loc/page2.php" class="f-header2__btn btn btn--primary">Book a Yacht!</a></li>
       </ul>
+      <ul><div>
+      <i class="material-icons">person</i>    </div>
+    </ul>
+    <ul>
+        <h4 class="logged">NOM PRENOM</h4>
+    </ul>
     </div>
   </div>
+<div>
+  <a href="">
+  <i class="fa fa-ship" id="boat1" style="font-size:24px"></i>
+  </a></div>
+  <div> 
+  <a href=""><i class="fa fa-ship" id="boat2" style="font-size:24px"></i>
+  </a></div>
+  <div> 
+  <a href=""><i class="fa fa-ship" id="boat3" style="font-size:24px"></i>
+  </a></div>
 </header>
+
+
 
