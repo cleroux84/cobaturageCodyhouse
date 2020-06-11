@@ -1,0 +1,99 @@
+/* -------------------------------- 
+
+File#: _1_newsletter
+Title: Newsletter 
+Descr: Newsletter form template
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+
+.newsletter {
+
+    color: white;
+    padding-top: 100px;
+}
+.btn{
+    border: black solid 2px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    width: 100px;;
+}
+
+.yellowButton{
+    margin-top: 20px;
+    box-shadow: 5px 5px 5px black;
+    width: 200px;
+    color: black;
+    font-size: 15px;
+    height: 60px;
+    background-color: var(--color-warning);
+    @include fontSmooth;
+
+}
+h2{
+    color: white;
+}
+.notified{
+    margin-top: 100px;
+}
+
+.newsletter__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--space-xxs);
+
+
+  .form-control {
+    width: auto;
+    border: black 1px solid;
+  }
+
+
+ 
+
+  @include breakpoint(xs) {
+    grid-template-columns: 1fr auto;
+
+    &.newsletter__form--col-3 {
+      grid-template-columns: 1fr 1fr auto;
+    }
+
+    &.newsletter__form--col-2 {
+      grid-template-columns: repeat(2, 1fr);
+
+      .btn {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+.newsletter__feedback {
+  font-size: var(--text-sm);
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-xs);
+  // hide
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+.newsletter__feedback--is-visible {
+  // show
+  position: relative;
+  clip: auto;
+  clip-path: none;
+}
+
+
+.newsletter__small {
+  line-height: 1.4;
+  color: var(--color-contrast-medium);
+  font-size: var(--text-xs);
+
+  a {
+    color: var(--color-contrast-high);
+  }
+}

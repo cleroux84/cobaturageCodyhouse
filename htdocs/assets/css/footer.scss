@@ -1,0 +1,92 @@
+/* -------------------------------- 
+
+File#: _1_main-footer
+Title: Main Footer
+Descr: Footer navigation
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.main-footer {
+  
+    display: flex;
+    margin: auto;
+    z-index: 1;
+    margin-top: 288px;
+    padding-top: 30px;
+    background-color: rgba(6, 67, 107, 0.616);
+    height: 300px;
+  }
+  
+  .main-footer__logo {
+    flex-shrink: 0;
+    display: block;
+  
+    svg, img {
+      display: block;
+      width: inherit;
+      height: inherit;
+    }
+  }
+  
+  .main-footer__item {
+    margin-top: var(--space-xs);
+  }
+  
+  .main-footer__link {
+    color: white;
+    text-decoration: none;
+  
+    &:hover {
+      color: var(--color-contrast-high);
+    }
+  }
+  
+  // colophon
+  .main-footer__colophon {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .main-footer__social {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--color-contrast-medium);
+  
+    &:hover {
+      color: var(--color-contrast-high);
+    }
+  }
+  
+  @include breakpoint(md) {
+    .main-footer__legend {
+      font-size: var(--text-base);
+      color: white;
+    }
+    
+    .main-footer__item {
+      font-size: 0.6em;
+    }
+  }
+
+  .icon{
+    width: 50px;
+    height: 50px;
+    color: white;
+  }
+
+  .iconDiv{
+        border-radius: 50%;
+        display: block; // flex fallback
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      
+  }
+  .grid{
+      display: flex;
+      justify-content: center;
+  }
+
